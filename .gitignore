@@ -1,3 +1,4 @@
 .idea
 *.iml
+*.gld
 data/config.inc.php
