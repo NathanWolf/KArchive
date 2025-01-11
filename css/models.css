@@ -1,0 +1,121 @@
+#models {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modelList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: start;
+    overflow: auto;
+    padding-bottom: 128px;
+}
+
+.portrait {
+    min-width: 256px;
+    min-height: 256px;
+    max-height: 256px;
+    overflow: hidden;
+    cursor: pointer;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 4px solid red;
+    margin: 0px 20px 20px 0px;
+    background: white;
+}
+
+.portrait.small {
+    border: 1px solid #DDD;
+    min-width: 64px;
+    min-height: 64px;
+    max-height: 64px;
+}
+
+.portrait.tiny {
+    border: none;
+    min-width: 24px;
+    min-height: 24px;
+    max-height: 24px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.portraitName {
+    padding-bottom: 10px;
+    min-height: 246px;
+    max-height: 246px;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 2em;
+    background: black;
+    color: white;
+    cursor: pointer;
+    border: 4px solid rgba(0, 0, 0, 0);
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+}
+
+.portraitContainer {
+    display: flex;
+}
+
+.portraitContainer:hover .portraitName {
+    background: #888;
+    color: red;
+}
+
+.portraitContainer:hover .portrait {
+    background: red;
+}
+
+.characterSheet {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    background: #444;
+    border: 2px solid #800;
+}
+
+.sheetImage {
+    min-width: 200px;
+    max-width: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 8px solid #800;
+}
+
+.sheetName {
+    font-size: 3em;
+    font-family: monspace;
+    color: white;
+}
+
+.sheetProperties {
+    overflow-y: auto;
+    margin-left: 1em;
+    width: 100%;
+}
+
+table.properties {
+    border-collapse: collapse;
+    color: #EEE;
+}
+
+table.properties tr {
+    border-bottom: 1px solid grey;
+}
+
+hr.separator {
+    height: 3px;
+    border: none;
+    background: black;
+    margin-top: -4px;
+}
+
+table.properties th {
+    white-space: nowrap;
+    padding-right: 1em;
+}
