@@ -71,6 +71,31 @@ class Models extends Component {
             modelController.#popupModelId = null;
             modelController.getController().getHistory().unset('model');
         });
+
+        const modelViewer = document.createElement("model-viewer");
+        modelViewer.src = 'model/' + modelId + '.glb';
+        modelViewer.poster = 'image/model/' + modelId + '.png';
+        modelViewer.shadowIntensity = 1;
+        modelViewer.ar = true;
+        modelViewer.cameraControls = true;
+        modelViewer.touchAction = 'pan-y';
+
+        let viewButton = document.createElement('button');
+        viewButton.id = 'ar-button';
+        viewButton.slot = 'ar-button';
+        modelViewer.appendChild(viewButton);
+
+        let promptButton = document.createElement('button');
+        promptButton.id = 'ar-prompt';
+        promptButton.src = 'image/hand.png';
+        modelViewer.appendChild(promptButton);
+
+        let failureButton = document.createElement('button');
+        failureButton.id = 'ar-failure';
+        failureButton.innerText = 'AR Tracking Failure, Sorry!';
+        modelViewer.appendChild(failureButton);
+
+        popup.appendChild(modelViewer);
     }
 
     #getImage(modelId, folder, dataKey) {
@@ -83,7 +108,7 @@ class Models extends Component {
     }
 
     getThumbnail(modelId) {
-        return this.#getImage(modelId, 'models', 'thumbnail');
+        return this.#getImage(modelId, 'model', 'thumbnail');
     }
 
     getTitle() {

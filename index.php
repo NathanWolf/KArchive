@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
     <link rel="stylesheet" href="css/archive.css?v=<?=VERSION?>">
     <link rel="stylesheet" href="css/models.css?v=<?=VERSION?>">
-    <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
+    <link rel="stylesheet" href="css/viewer.css?v=<?=VERSION?>">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     <script type="text/javascript" src="js/utilities.js?v=<?=VERSION?>"></script>
     <script type="text/javascript" src="js/history.js?v=<?=VERSION?>"></script>
     <script type="text/javascript" src="js/component.js?v=<?=VERSION?>"></script>
